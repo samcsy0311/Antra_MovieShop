@@ -1,0 +1,96 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MovieShopMVC
+build_property.RootNamespace = MovieShopMVC
+build_property.ProjectDir = C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShopMVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShopMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Genre/Genres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcR2VucmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Genre/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Home/TopMovies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb3BNb3ZpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Movies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/Components/Genres/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcR2VucmVzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/_LoginInfoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkluZm9QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/_MovieCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb3ZpZUNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/_PurchaseMovieCardPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QdXJjaGFzZU1vdmllQ2FyZFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/User/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/User/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGYXZvcml0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/User/Purchases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQdXJjaGFzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Antra/AntraFullStackAssignment/MovieShop(new)/MovieShopMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

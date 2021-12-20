@@ -1,0 +1,13 @@
+﻿@model ApplicationCore.Models.MovieCardResponseModel
+
+
+ <div class="card mb-4 shadow bg-light ">
+@*      when we click on the poster go to Movies controller and Details action method and it should pass the id of the movie
+          http://localhost/movies/details/3
+          Tag Helpers
+*@      
+     <a asp-controller="Movies" asp-action="Details" asp-route-id="@Model.Id">
+          <img src="@Model.PosterUrl" class="img-fluid" alt="@Model.Title" />
+     </a>
+
+ </div>

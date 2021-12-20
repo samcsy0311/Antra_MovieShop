@@ -1,0 +1,14 @@
+﻿@model ApplicationCore.Models.PurchaseMovieResponseModel
+
+
+ <div class="card mb-4 shadow bg-light ">
+@*      when we click on the poster go to Movies controller and Details action method and it should pass the id of the movie
+          http://localhost/movies/details/3
+          Tag Helpers
+*@  
+     <img src="@Model.PosterUrl" class="img-fluid" alt="@Model.Title" />
+     <div class="card-footer bg-dark text-white" style="text-align:center; font-size:12px">
+          Purchase Details
+     </div>
+
+ </div>

@@ -1,0 +1,27 @@
+﻿@model ApplicationCore.Models.UserDetailsModel;
+
+<div class="card" style="width: 23rem; margin:auto">
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAABlBMVEXJycmcnJyshIZ4AAAB7ElEQVR4nO3bUW7DMAwEUfv+ly4SGEXQ2kksk1xqPXMCvj8BIpeFiIiIiIiIiIiIiIiIiKio9TX1MIOt+6nHOtcBYjbMB8YklC8UM1i+ZjSnnHL0lZxkdKUMMFpSBh3tJMOOXpILjFaUi442ksuOJpIARwtJiKOBJMihl7hAwhxiSaBDKgl1KCUukGCHThIOEUniHRpIgkMjcYGkOBQSIM0kWQ4g3RzVEiBApnPUSoAAAaJzVEqAAAECBAgQIECAzCopdAABAkQoKXUAATKfpNjhA7H5Q+RXtx3EZvPBB2KzHeSzr+WzQWez0+gDsdn79dnE9tmN94HY3I/4XPT43Fj5XL353CEuNpehi8+trs/19GJzz74MSNQDH2fCeGTCeGTCeOah2LJA/OZgICIioq35nygOr9+Phhk0JxCNMQOKhpZhRS/LRUYTSoCigyWMoaWEMnSUcIaGksIQUNIcRjvlhZRkR5UknVFEKXHkS4oY6ZRCR6qk1JEoKXakScodSRKBI0MiYSRQZI5gidARK3GBSB2BErEjTKJmrEESNeKZiyNCohZsuTguS9TjvwSkmeOSRD36n4CoB//X3SHqsXe6N0Q99G53hqhHPghIt1wc5yXqeQ+7K0Q97puAdOueEPWwbwPSLSDd2p34B3GsN/j6gvMWAAAAAElFTkSuQmCC" 
+          class="card-img-top" alt="Unknown User Picture" style="width:80%; margin: auto">
+     <div class="card-body">
+          <h4 class="card-title">@(Model.FirstName + " " + Model.LastName)</h4>
+          <hr />
+          <table class="table table-borderless">
+               <tbody>
+                    <tr>
+                         <td class="card-text">User ID:</td>   <td class="card-text">@Model.Id</td>
+                    </tr>
+                    <tr>
+                         <td class="card-text">Date Of Birth:</td>   <td class="card-text">@Model.DateOfBirth.Value.ToString("MMM d, yyyy")</td>
+                    </tr>
+                    <tr>
+                         <td class="card-text">Email:</td>   <td class="card-text">@Model.Email</td>
+                    </tr>
+                    <tr>
+                         <td class="card-text">Phone No.:</td>   <td class="card-text">@Model.PhoneNumber</td>
+                    </tr>
+               </tbody>
+          </table>
+          <a asp-controller="User" asp-action="EditProfile" class="btn btn-primary">Edit</a>
+     </div>
+</div>
