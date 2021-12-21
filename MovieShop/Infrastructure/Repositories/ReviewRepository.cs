@@ -42,7 +42,30 @@ namespace Infrastructure.Repositories
 
           public async override Task<Review> Update(Review review)
           {
+               var _review = await _dbContext.Reviews
+                    .Where(r => r.UserId == review.UserId && r.MovieId == review.MovieId)
+                    .FirstOrDefaultAsync();
+               
+               _review.Rating = review.Rating;
+               if (review.ReviewText != null)
+               {
+                    _review.ReviewText = review.ReviewText;
+               }
 
+               await _dbContext.SaveChangesAsync();
+               return _review;
+          }
+
+          public async Task<Review> Delete(int UserId, int MovieId)
+          {
+               var review = await _dbContext.Reviews.Where(r => r.UserId == UserId && r.MovieId == MovieId)
+                    .FirstOrDefaultAsync();
+               if (review != null)
+               {
+                    _dbContext.Reviews.Remove(review);
+                    await _dbContext.SaveChangesAsync();
+               }
+               return review;
           }
      }
 }

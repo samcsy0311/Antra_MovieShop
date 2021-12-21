@@ -12,5 +12,6 @@ namespace ApplicationCore.RepositoryInterfaces
           Task<IEnumerable<Review>> GetByMovieId(int id);
           Task<IEnumerable<Review>> GetByUserId(int id);
           Task<Review> GetByUserMovieId(int userId, int movieId);
+          Task<Review> Delete(int UserId, int MovieId);
      }
 }

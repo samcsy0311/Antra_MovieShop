@@ -81,6 +81,15 @@ namespace MovieShop.API.Controllers
                return Ok(newReview);
           }
 
+          [HttpDelete]
+          [Route("{userId:int}/movie/{movieId:int}")]
+          public async Task<IActionResult> DeleteReview(int userId, int movieId)
+          {
+               var review = await _reviewService.DeleteReview(userId, movieId);
+               if (review == null) return BadRequest("Review does not exist");
+               return Ok(review);
+          }
+
           [HttpGet]
           [Route("{id:int}/purchases")]
           public async Task<IActionResult> GetPurchases(int id)

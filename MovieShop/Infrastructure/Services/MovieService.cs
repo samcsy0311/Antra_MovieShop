@@ -32,6 +32,81 @@ namespace Infrastructure.Services
                return await _movieRepository.GetAll();
           }
 
+          public async Task<int> AddMovie(MovieCreateRequest movieCreateRequest)
+          {
+               var getMovie = await _movieRepository.GetById(movieCreateRequest.Id.Value);
+               if (getMovie != null) return -1;
+
+               var genres = new List<MovieGenre>();
+               foreach (var genre in movieCreateRequest.Genre)
+               {
+                    genres.Add(new MovieGenre
+                    {
+                         GenreID = genre
+                    });
+               }
+
+               var movie = new Movie
+               {
+                    Title = movieCreateRequest.Title,
+                    Overview = movieCreateRequest.Overview,
+                    Tagline = movieCreateRequest.Tagline,
+                    Revenue = movieCreateRequest.Revenue,
+                    Budget = movieCreateRequest.Budget,
+                    ImdbUrl = movieCreateRequest.ImdbUrl,
+                    TmdbUrl = movieCreateRequest.TmdbUrl,
+                    PosterUrl = movieCreateRequest.PosterUrl,
+                    BackdropUrl = movieCreateRequest.BackdropUrl,
+                    OriginalLanguage = movieCreateRequest.OriginalLanguage,
+                    ReleaseDate = movieCreateRequest.ReleaseDate,
+                    RunTime = movieCreateRequest.RunTime,
+                    Price = movieCreateRequest.Price,
+                    GenresOfMovie = genres
+               };
+
+               var newMovie = await _movieRepository.Add(movie);
+               if (newMovie == null) return -1;
+               return newMovie.Id;
+          }
+
+          public async Task<int> UpdateMovie(MovieCreateRequest movieCreateRequest) 
+          {
+               var getMovie = await _movieRepository.GetById(movieCreateRequest.Id.Value);
+               if (getMovie == null) return await AddMovie(movieCreateRequest);
+
+               var genres = new List<MovieGenre>();
+               foreach (var genre in movieCreateRequest.Genre)
+               {
+                    genres.Add(new MovieGenre
+                    {
+                         MovieID = movieCreateRequest.Id.Value,
+                         GenreID = genre
+                    });
+               }
+
+               var movie = new Movie
+               {
+                    Id = movieCreateRequest.Id.Value,
+                    Title = movieCreateRequest.Title,
+                    Overview = movieCreateRequest.Overview,
+                    Tagline = movieCreateRequest.Tagline,
+                    Revenue = movieCreateRequest.Revenue,
+                    Budget = movieCreateRequest.Budget,
+                    ImdbUrl = movieCreateRequest.ImdbUrl,
+                    TmdbUrl = movieCreateRequest.TmdbUrl,
+                    PosterUrl = movieCreateRequest.PosterUrl,
+                    BackdropUrl = movieCreateRequest.BackdropUrl,
+                    OriginalLanguage = movieCreateRequest.OriginalLanguage,
+                    ReleaseDate = movieCreateRequest.ReleaseDate,
+                    RunTime = movieCreateRequest.RunTime,
+                    Price = movieCreateRequest.Price,
+                    GenresOfMovie = genres
+               };
+
+               var newMovie = await _movieRepository.Update(movie);
+               return newMovie.Id;
+          }
+
           public async Task<IEnumerable<MovieCardResponseModel>> GetHighestGrossingMovies()
           {
                // call my MovieRepository and get the data 

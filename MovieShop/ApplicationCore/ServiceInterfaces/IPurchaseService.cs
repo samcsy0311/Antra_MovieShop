@@ -12,5 +12,6 @@ namespace ApplicationCore.ServiceInterfaces
      {
           Task<int> AddPurchases(PurchaseRequestModel purchaseRequestModel);
           Task<Purchase> GetPurchases(int id);
+          Task<IEnumerable<Purchase>> GetAllPurchases();
      }
 }

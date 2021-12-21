@@ -66,13 +66,19 @@ namespace Infrastructure.Services
                var review = await _reviewRepository.GetByUserMovieId(reviewRequestModel.userId, reviewRequestModel.movieId);
                if (review != null)
                {
-                    _reviewRepository.Update(newReview);
+                    await _reviewRepository.Update(newReview);
                     return 0;
                }
                
                newReview = await _reviewRepository.Add(newReview);
                if (newReview != null) return 0;
                return -1;
+          }
+
+          public async Task<Review> DeleteReview (int userId, int movieId)
+          {
+               var review = await _reviewRepository.Delete(userId, movieId);
+               return review;
           }
      }
 }

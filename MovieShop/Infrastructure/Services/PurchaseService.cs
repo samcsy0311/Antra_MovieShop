@@ -42,5 +42,10 @@ namespace Infrastructure.Services
                var purchase = await _purchaseRepository.GetById(id);
                return purchase;
           }
+
+          public async Task<IEnumerable<Purchase>> GetAllPurchases ()
+          {
+               return await _purchaseRepository.GetAll();
+          }
      }
 }

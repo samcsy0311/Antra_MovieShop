@@ -13,7 +13,7 @@ namespace Infrastructure.Repositories
                _dbContext = dbContext;
           }
 
-          public async Task<T> Add(T entity)
+          public virtual async Task<T> Add(T entity)
           {
                _dbContext.Set<T>().Add(entity);
                await _dbContext.SaveChangesAsync();
@@ -41,7 +41,9 @@ namespace Infrastructure.Repositories
 
           public virtual async Task<T> Update(T entity)
           {
-               throw new NotImplementedException();
+               _dbContext.Set<T>().Update(entity);
+               await _dbContext.SaveChangesAsync();
+               return entity;
           }
      }
 }

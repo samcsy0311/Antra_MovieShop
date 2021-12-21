@@ -3,10 +3,10 @@ using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.data;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Transactions;
 
 namespace Infrastructure.Repositories
 {
@@ -17,6 +17,30 @@ namespace Infrastructure.Repositories
 
           }
 
+          public async override Task<Movie> Update(Movie movie)
+          {
+               var _movie = await _dbContext.Movies.Where(m => m.Id == movie.Id).FirstOrDefaultAsync();
+
+               if (_movie == null) return null;
+
+               if (movie.Title != null) _movie.Title = movie.Title;
+               if (movie.Overview != null) _movie.Overview = movie.Overview;
+               if (movie.Tagline != null) _movie.Tagline = movie.Tagline;
+               if (movie.Revenue != 0) _movie.Revenue = movie.Revenue;
+               if (movie.Budget != 0) _movie.Budget = movie.Budget;
+               if (movie.ImdbUrl != null) _movie.ImdbUrl = movie.ImdbUrl;
+               if (movie.TmdbUrl != null) _movie.TmdbUrl = movie.TmdbUrl;
+               if (movie.PosterUrl != null) _movie.PosterUrl = movie.PosterUrl;
+               if (movie.BackdropUrl != null) _movie.BackdropUrl = movie.BackdropUrl;
+               if (movie.OriginalLanguage != null) _movie.OriginalLanguage = movie.OriginalLanguage;
+               if (movie.ReleaseDate != null) _movie.ReleaseDate = movie.ReleaseDate;
+               if (movie.RunTime != null) _movie.RunTime = movie.RunTime;
+               if (movie.Price != null) _movie.Price = movie.Price;
+               if (movie.GenresOfMovie != null) _movie.GenresOfMovie = movie.GenresOfMovie;
+
+               await _dbContext.SaveChangesAsync();
+               return _movie;
+          }
           public async Task<IEnumerable<Movie>> Get30HighestRatedMovies()
           {
                var movies = await _dbContext.Movies

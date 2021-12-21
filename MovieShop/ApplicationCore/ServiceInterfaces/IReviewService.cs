@@ -15,5 +15,6 @@ namespace ApplicationCore.ServiceInterfaces
           Task<Review> getReviewByUserMovieId(int userId, int movieId);
           Task<int> AddReview(ReviewRequestModel reviewRequestModel);
           Task<int> UpdateReview(ReviewRequestModel reviewRequestModel);
+          Task<Review> DeleteReview(int userId, int movieId);
      }
 }
