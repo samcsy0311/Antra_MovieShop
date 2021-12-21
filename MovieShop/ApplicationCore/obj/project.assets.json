@@ -7048,11 +7048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\ApplicationCore\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yD4kUrwbWLCy5dEve1ogyDChfRltXir1IRYX+kJ8Khsej4y991+SsSionpA4akHVcES4WjeW44hS5vRAUakPYg==",
+  "dgSpecHash": "+mayGRCGgLLlOq8Cu3EizAxt6q3p10I2EqQSfG6kt/AZWN4j+vRVBm30ShS8vsTHlsSpHLawkU26pDRWQfXABA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.1\\microsoft.aspnetcore.cryptography.internal.6.0.1.nupkg.sha512",

@@ -55,5 +55,15 @@ namespace Infrastructure.Repositories
 
                return _user;
           }
+
+          public async Task<Movie> GetFavoriteByMovieId(int id, int movieId)
+          {
+               var movie = await _dbContext.Movies.Where(
+                    x => _dbContext.Favorites.Where(f => f.UserId == id)
+                    .Where(f => f.MovieId == movieId)
+                    .Select(f => f.MovieId).Contains(x.Id))
+                    .FirstOrDefaultAsync();
+               return movie;
+          }
      }
 }

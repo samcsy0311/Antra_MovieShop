@@ -24,7 +24,7 @@
                                              <div class="col-8">
                                                   <ul class="list-group list-group-flush">
                                                        <li class="list-group-item border-bottom-2">
-                                                            Purchased Date <span class="badge badge-pill bg-dark">@movie.Purchases.PurchaseDateTime.ToString("MMM d, yyyy")</span>
+                                                            Purchased Date <span class="badge badge-pill bg-dark">@movie.Purchases.PurchaseDateTime.Value.ToString("MMM d, yyyy")</span>
                                                        </li>
                                                        <li class="list-group-item border-bottom-2">
                                                             Price <span class="badge badge-pill bg-dark">$@String.Format("{0:n}", Math.Round((decimal)@movie.Price,2))</span>

@@ -9,7 +9,7 @@ namespace ApplicationCore.Models
     public class PurchaseResponseModel
     {
           public int Id { get; set;}
-          public Guid PurchaseNumber { get; set; }
-          public DateTime PurchaseDateTime { get; set; }
+          public Guid? PurchaseNumber { get; set; }
+          public DateTime? PurchaseDateTime { get; set; }
      }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m5OzfoBV3wNxTw1phpYPCZGmJUZtjNeMejH6TLa4R2OqIHkFQV3LGS20EZ2LdInV0RwYeZocmeVzzfQHt5rzPw==",
+  "dgSpecHash": "LiICpsfC3Tl9uRi7vpbCLrh2rst+3W1/D0X4wsvL3llf96eefaIWLvSHey+tGEbMKGG1kH095a8VZ1mTgKeqZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\MovieShop.UnitTests\\MovieShop.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\MovieShop.UnitTests\\MovieShop.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",

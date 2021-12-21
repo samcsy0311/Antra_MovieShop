@@ -8,5 +8,6 @@ namespace ApplicationCore.RepositoryInterfaces
           Task<IEnumerable<Movie>> GetPurchasedMovies(int Id);
           Task<IEnumerable<Movie>> GetFavoritedMovies(int Id);
           Task<User> UpdateUser(User user);
+          Task<Movie> GetFavoriteByMovieId(int id, int movieId);
      }
 }

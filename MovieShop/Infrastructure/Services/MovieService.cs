@@ -1,4 +1,5 @@
-﻿using ApplicationCore.Models;
+﻿using ApplicationCore.Entities;
+using ApplicationCore.Models;
 using ApplicationCore.RepositoryInterfaces;
 using ApplicationCore.ServiceInterfaces;
 using Infrastructure.Repositories;
@@ -26,6 +27,11 @@ namespace Infrastructure.Services
                _movieRepository = movieRepository; // can be anything implementing the IMovieRepo
           }
 
+          public async Task<IEnumerable<Movie>> GetAllMovies()
+          {
+               return await _movieRepository.GetAll();
+          }
+
           public async Task<IEnumerable<MovieCardResponseModel>> GetHighestGrossingMovies()
           {
                // call my MovieRepository and get the data 
@@ -33,6 +39,18 @@ namespace Infrastructure.Services
 
                // 3rd party Automapper from 
                // manual way
+               var movieCards = new List<MovieCardResponseModel>();
+               foreach (var movie in movies)
+               {
+                    movieCards.Add(new MovieCardResponseModel { Id = movie.Id, PosterUrl = movie.PosterUrl, Title = movie.Title });
+               }
+
+               return movieCards;
+          }
+
+          public async Task<IEnumerable<MovieCardResponseModel>> GetHighestRatedMovies()
+          {
+               var movies = await _movieRepository.Get30HighestRatedMovies();
                var movieCards = new List<MovieCardResponseModel>();
                foreach (var movie in movies)
                {

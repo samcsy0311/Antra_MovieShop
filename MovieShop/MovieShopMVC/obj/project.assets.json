@@ -10273,11 +10273,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\MovieShopMVC\\MovieShopMVC.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
       "projectName": "MovieShopMVC",
-      "projectPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\MovieShopMVC\\MovieShopMVC.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\MovieShopMVC\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\MovieShopMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10294,11 +10294,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Antra\\AntraFullStackAssignment\\MovieShop(new)\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Antra\\MovieShop\\Antra_MovieShop\\MovieShop\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

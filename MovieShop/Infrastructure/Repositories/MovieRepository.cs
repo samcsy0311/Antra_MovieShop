@@ -17,6 +17,18 @@ namespace Infrastructure.Repositories
 
           }
 
+          public async Task<IEnumerable<Movie>> Get30HighestRatedMovies()
+          {
+               var movies = await _dbContext.Movies
+                    .Where(m => _dbContext.Reviews.GroupBy(r => r.MovieId)
+                    .OrderByDescending(r => r.Average(x => x.Rating))
+                    .Select(r => r.Key)
+                    .Take(30)
+                    .Contains(m.Id))
+                    .ToListAsync();
+               return movies;
+          }
+
           public async Task<IEnumerable<Movie>> Get30HighestGrossingMovies()
           {
                // we need to go to database and get the movies using Dapper or EF Core

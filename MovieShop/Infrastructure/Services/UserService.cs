@@ -59,9 +59,21 @@ namespace Infrastructure.Services
                     PhoneNumber = user.PhoneNumber
                };
                return userDetails;
-        }
+          }
 
-        public async Task<List<MovieCardResponseModel>> GetUserFavoritedMovies(int id)
+          public async Task<User> GetUser (int id)
+          {
+               var user = await _userRepository.GetById(id);
+               return user;
+          }
+
+          public async Task<IEnumerable<User>> GetAllUsers()
+          {
+               var users = await _userRepository.GetAll();
+               return users;
+          }
+
+          public async Task<List<MovieCardResponseModel>> GetUserFavoritedMovies(int id)
           {
                var movie = await _userRepository.GetFavoritedMovies(id);
 
@@ -101,6 +113,12 @@ namespace Infrastructure.Services
                }
 
                return movieCards;
+          }
+
+          public async Task<Movie> UserHasFavoritedMovie(int id, int movieId)
+          {
+               var movie = await _userRepository.GetFavoriteByMovieId(id, movieId);
+               return movie;
           }
      }
 }
