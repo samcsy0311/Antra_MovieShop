@@ -39,7 +39,7 @@ namespace Infrastructure.Repositories
                return entity;
           }
 
-          public async Task<T> Update(T entity)
+          public virtual async Task<T> Update(T entity)
           {
                throw new NotImplementedException();
           }

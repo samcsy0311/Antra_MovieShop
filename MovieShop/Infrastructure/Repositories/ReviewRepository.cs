@@ -32,5 +32,17 @@ namespace Infrastructure.Repositories
 
                return reviews;
           }
+
+          public async Task<Review> GetByUserMovieId (int userId, int movieId)
+          {
+               var review = await _dbContext.Reviews.Where(r => r.UserId == userId && r.MovieId == movieId)
+                    .FirstOrDefaultAsync();
+               return review;
+          }
+
+          public async override Task<Review> Update(Review review)
+          {
+
+          }
      }
 }

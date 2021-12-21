@@ -61,6 +61,26 @@ namespace MovieShop.API.Controllers
                return Ok(movie);
           }
 
+          [HttpPost]
+          [Route("review")]
+          public async Task<IActionResult> ReviewMovie(ReviewRequestModel reviewRequestModel)
+          {
+               var result = await _reviewService.AddReview(reviewRequestModel);
+               if (result == -1) return BadRequest("Review already exists");
+               var newReview = await _reviewService.getReviewByUserMovieId(reviewRequestModel.userId, reviewRequestModel.movieId);
+               return Ok(newReview);
+          }
+
+          [HttpPut]
+          [Route("review")]
+          public async Task<IActionResult> UpdateReviewMovie(ReviewRequestModel reviewRequestModel)
+          {
+               var result = await _reviewService.UpdateReview(reviewRequestModel);
+               if (result == -1) return BadRequest("Review update failed");
+               var newReview = await _reviewService.getReviewByUserMovieId(reviewRequestModel.userId, reviewRequestModel.movieId);
+               return Ok(newReview);
+          }
+
           [HttpGet]
           [Route("{id:int}/purchases")]
           public async Task<IActionResult> GetPurchases(int id)
