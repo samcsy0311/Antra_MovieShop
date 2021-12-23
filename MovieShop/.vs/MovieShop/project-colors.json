@@ -25,7 +25,12 @@
       "ProjectGuid": "87199e54-6992-432d-9eac-3f0745595cae",
       "DisplayName": "MovieShop.UnitTests",
       "ColorIndex": 3
+    },
+    "7bf59e30-4aa0-4b01-8353-5a5e58611d9a": {
+      "ProjectGuid": "7bf59e30-4aa0-4b01-8353-5a5e58611d9a",
+      "DisplayName": "MovieShop.API",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

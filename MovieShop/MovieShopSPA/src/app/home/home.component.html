@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div class="rounded">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-lg-3 col-sm-4 col-xl-2" *ngFor="let movieCard of movieCards">
+            <!-- call child component and pass the data through inputs -->
+            <app-movie-card [movieCards]="movieCard" [testInfo]="movieCard.title"></app-movie-card>
+        </div>
+      </div>
+  </div>
+</div>>
