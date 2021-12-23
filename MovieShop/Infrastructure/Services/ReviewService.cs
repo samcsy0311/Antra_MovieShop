@@ -25,10 +25,21 @@ namespace Infrastructure.Services
                return reviews;
           }
 
-          public async Task<IEnumerable<Review>> getReviewsFromUser(int id)
+          public async Task<IEnumerable<ReviewResponseModel>> getReviewsFromUser(int id)
           {
                var reviews = await _reviewRepository.GetByUserId(id);
-               return reviews;
+               var reviewResponse = new List<ReviewResponseModel>();
+               foreach (var review in reviews)
+               {
+                    reviewResponse.Add(new ReviewResponseModel
+                    {
+                         MovieId = review.MovieId,
+                         UserId = review.UserId,
+                         Rating = review.Rating,
+                         ReviewText = review.ReviewText
+                    });
+               }
+               return reviewResponse;
           }
 
           public async Task<Review> getReviewByUserMovieId(int userId, int movieId)

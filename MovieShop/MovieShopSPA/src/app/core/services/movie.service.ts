@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { MovieCard } from 'src/app/shared/models/movieCard';
 import { HttpClient } from '@angular/common/http'
 import { environment} from 'src/environments/environment';
+import { MovieDetails } from 'src/app/shared/models/movieDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,19 @@ export class MovieService {
 
   // Home component will call this method
   // Return list of movie card model
-  // Observatables (Kind of like a Linq; async)
+  // Observatables (Kind of like a Linq; async) RXJS
+
   getTopGrossingMovies() : Observable<MovieCard[]> {
     // we need to make a call to the API https://localhost:7224/api/Movies/toprevenue
     // HttpClient class comes from HttpClientModule in angular
 
-    return this.http.get<MovieCard[]>(`${environment.apiBaseUrl}Movies/toprevenue`);;
+    return this.http.get<MovieCard[]>(`${environment.apiBaseUrl}Movies/toprevenue`);
+  }
+
+  getMovieDetails(id: Number) : Observable<MovieDetails>{
+    // call the api to get movie details, create the model based on json data and return the model
+
+    return this.http.get<MovieDetails>(`${environment.apiBaseUrl}Movies/${id}`);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieCard } from '../../models/movieCard';
+import { MovieDetails } from '../../models/movieDetails';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,6 +11,7 @@ export class MovieCardComponent implements OnInit {
 
   @Input() movieCards!: MovieCard;
   @Input() testInfo!: string;
+  @Input() movieDetails!: MovieDetails;
   constructor() { }
 
 

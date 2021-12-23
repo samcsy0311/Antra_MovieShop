@@ -22,7 +22,7 @@ namespace MovieShop.API.Controllers
           [Route("{Id:int}")]
           public async Task<IActionResult> GetUserDetail(int Id)
           {
-               var user = await _userService.GetUser(Id);
+               var user = await _userService.GetUserDetails(Id);
                if (user == null) return NotFound();
                return Ok(user);
           }

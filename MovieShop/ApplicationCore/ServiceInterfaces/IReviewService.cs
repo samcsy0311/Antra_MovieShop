@@ -11,7 +11,7 @@ namespace ApplicationCore.ServiceInterfaces
      public interface IReviewService
      {
           Task<IEnumerable<Review>> getAllReviews(int id);
-          Task<IEnumerable<Review>> getReviewsFromUser(int id);
+          Task<IEnumerable<ReviewResponseModel>> getReviewsFromUser(int id);
           Task<Review> getReviewByUserMovieId(int userId, int movieId);
           Task<int> AddReview(ReviewRequestModel reviewRequestModel);
           Task<int> UpdateReview(ReviewRequestModel reviewRequestModel);
