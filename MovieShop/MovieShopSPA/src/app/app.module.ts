@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

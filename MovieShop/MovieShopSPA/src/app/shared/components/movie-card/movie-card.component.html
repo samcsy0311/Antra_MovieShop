@@ -1,5 +1,11 @@
 <div class="card mb-4 bg-light">
-  <a>
+  <!-- Navigate to Movie Details Component, routerLink -->
+  <!--
+    <a>
+      <img src="{{movieCards.posterUrl}}" class="img-fluid rounded" />
+    </a>
+  -->
+  <a [routerLink]="[ '/movies/details', movieCards.id]">
     <img src="{{movieCards.posterUrl}}" class="img-fluid rounded" />
   </a>
 </div>
