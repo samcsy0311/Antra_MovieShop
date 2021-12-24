@@ -1,1 +1,79 @@
-<p>movie-details works!</p>
+<div class="-moz-text-size-adjustainer">
+  <div class="row special-row" style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('{{movie.backdropUrl}}') no-repeat">
+       <div class="col-4" style="text-align:center">
+            <div class="card" style="width: 180px; margin:auto">
+                 <img class="card-img-top" src="{{movie?.posterUrl}}" style="height:248px" alt="">
+            </div>
+       </div>
+       <div class="col-6">
+            <h3 style="color:white">{{movie?.title}}</h3>
+            <p style="color:gray; font-size:10px">{{movie?.tagline}}</p>
+            <p style="color:gray; font-size:12px">
+                 <b>{{movie?.runTime}} m | {{movie?.releaseYear}} </b> &nbsp; &nbsp;
+                 <a *ngFor="let genre of movie.genres"
+                      href="/Genre/List/{{genre.id}}"
+                      class="badge rounded-pill bg-secondary" style="text-decoration:none">
+                           {{genre.name}}
+                 </a>
+            </p>
+            <p>
+                 <span class="badge bg-success">{{movie?.rating}}</span>
+            </p>
+            <p style="color:white; font-size:12px">
+                 {{movie?.overview}}
+            </p>
+       </div>
+       <div class="col-2" style="font-size:14px">
+            <p style="padding-top: 50px">
+                 <a href="#" class="btn btn-outline-light disabled" tabindex="-1" role="button" aria-disabled="true" style="width:100px">REVIEW</a>
+            </p>
+            <p>
+                 <a href="#" class="btn btn-light disabled" tabindex="-1" role="button" aria-disabled="true" style="width:100px">BUY ${{movie.price}}</a>
+            </p>
+       </div>
+  </div>
+  <div class="row" style="margin-left:1%; margin-right:1%">
+       <div class="col-4 bg-light">
+            <ul class="list-group list-group-flush">
+                 <li class="list-group-item bg-light"><h5>MOVIE FACTS</h5></li>
+                 <li class="list-group-item border-bottom-2 bg-light">
+                      Release Date <span class="badge badge-pill bg-dark">{{movie.releaseDateWithoutTime}}</span>
+                 </li>
+                 <li class="list-group-item border-bottom-2 bg-light">
+                      Run Time <span class="badge badge-pill bg-dark">{{movie.runTime}} m</span>
+                 </li>
+                 <li class="list-group-item border-bottom-2 bg-light">
+                      Box Office <span class="badge badge-pill bg-dark">${{movie.revenue}}</span>
+                 </li>
+                 <li class="list-group-item border-bottom-2 bg-light">
+                      Budget <span class="badge badge-pill bg-dark">${{movie.budget}}</span>
+                 </li>
+            </ul>
+            <br /><br />
+            <ul class="list-group list-group-flush">
+                 <li class="list-group-item bg-light"><h5>TRAILERS</h5></li>
+                 <li *ngFor="let trailer of movie.trailers" class="list-group-item border-bottom-0 bg-light">
+                    <a href="{{trailer.trailerUrl}}" class="btn btn-link" role="button" style="text-decoration:none; text-align:left; color: gray">
+                      <img src="data:image/png;base64,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" style="width:4%" />
+                      &nbsp; &nbsp;
+                      {{trailer.name}}
+                    </a>
+                  </li>
+            </ul>
+       </div>
+       <div class="col">
+            <ul class="list-group list-group-flush">
+                 <li class="list-group-item"><h5>CAST</h5></li>
+                 <li *ngFor="let cast of movie.casts" class="list-group-item">
+                    <ul class="list-group list-group-horizontal list-group-flush">
+                        <li class="list-group-item border-0" style="width: 20%">
+                          <img src = "{{cast.posterUrl}}" class="rounded-circle" style="width:40%; margin-right: 30px" />
+                        </li>
+                        <li class="list-group-item border-0" style="width: 40%">{{cast.name}}</li>
+                        <li class="list-group-item border-0">{{cast.character}}</li>
+                      </ul>
+                 </li>
+            </ul>
+       </div>
+  </div>
+</div>

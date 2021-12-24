@@ -12,7 +12,9 @@ export interface MovieDetails {
   posterUrl:        string;
   backdropUrl:      string;
   originalLanguage: string;
-  releaseDate:      string;
+  releaseDate:      Date;
+  releaseDateWithoutTime?: string;
+  releaseYear:      number;
   runTime:          number;
   price:            number;
   rating:           number;
