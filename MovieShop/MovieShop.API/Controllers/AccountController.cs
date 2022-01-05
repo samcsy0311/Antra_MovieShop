@@ -88,7 +88,7 @@ namespace MovieShop.API.Controllers
 
                // Microsoft.IdentityModel.Tokens
                // get the secret key for signing the tokens
-               var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SecretKey"]));
+               var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["secretKey"]));
 
                // specify the algorithm to sign the token
                var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);

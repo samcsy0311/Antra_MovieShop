@@ -35,7 +35,7 @@ builder.Services.AddScoped<ICastRepository, CastRepository>();
 builder.Services.AddScoped<IPurchaseRepository, PurchaseRepository>();
 builder.Services.AddScoped<IFavoriteRepository, FavoriteRepository>();
 
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddHttpContextAccessor();
 
 // Inject the connection string into the MovieShopDbContext constructor using DbContextOptions
 builder.Services.AddDbContext<MovieShopDbContext>(
@@ -46,10 +46,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
-         ValidateIssuer = false,
-         ValidateAudience = false,
-         ValidateIssuerSigningKey = true,
-         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["SecretKey"]))
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["secretKey"]))
     };
 });
 

@@ -7,6 +7,7 @@ namespace MovieShop.API.Controllers
 {
      [Route("api/[controller]")]
      [ApiController]
+     //[Authorize]
      public class UserController : ControllerBase
      {
           private readonly IUserService _userService;
@@ -91,7 +92,6 @@ namespace MovieShop.API.Controllers
                return Ok(review);
           }
 
-          [Authorize]
           [HttpGet]
           [Route("{id:int}/purchases")]
           public async Task<IActionResult> GetPurchases(int id)
