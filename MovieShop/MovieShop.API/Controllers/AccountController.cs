@@ -2,6 +2,11 @@
 using ApplicationCore.ServiceInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
+using System.Text;
 
 namespace MovieShop.API.Controllers
 {
@@ -11,11 +16,13 @@ namespace MovieShop.API.Controllers
      {
           private readonly IAccountService _accountService;
           private readonly IUserService _userService;
+          private readonly IConfiguration _configuration;
 
-          public AccountController(IAccountService accountService, IUserService userService)
+          public AccountController(IAccountService accountService, IUserService userService, IConfiguration configuration)
           {
                _accountService = accountService;
                _userService = userService;
+               _configuration = configuration;
           }
 
           [HttpGet]
@@ -61,8 +68,46 @@ namespace MovieShop.API.Controllers
                {
                     return Unauthorized ("wrong email/password");
                }
-               // JWT AUthnetcion
-               return Ok(user);
+               // JWT Authnetcion
+               return Ok(new { token = GenerateJWT(user) });
+          }
+
+          private string GenerateJWT(UserLoginResponseModel user)
+          {
+               var claims = new List<Claim>
+               {
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                    new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
+                    new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName)
+               };
+
+               // add the required claims to identity object 
+               var identityClaims = new ClaimsIdentity();
+               identityClaims.AddClaims(claims);
+
+               // Microsoft.IdentityModel.Tokens
+               // get the secret key for signing the tokens
+               var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SecretKey"]));
+
+               // specify the algorithm to sign the token
+               var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+               var expires = DateTime.UtcNow.AddHours(_configuration.GetValue<int>("ExpirationHours"));
+
+               // creating the token System.IdentityModel.Tokens.Jwt
+               var tokenHandler = new JwtSecurityTokenHandler();
+               var tokenDescriptor = new SecurityTokenDescriptor
+               {
+                    Subject = identityClaims,
+                    Expires = expires,
+                    SigningCredentials = credentials,
+                    Issuer = _configuration["Issuer"],
+                    Audience = _configuration["Audience"]
+               };
+
+               var encodedJwt = tokenHandler.CreateToken(tokenDescriptor);
+
+               return tokenHandler.WriteToken(encodedJwt);
           }
      }
 }

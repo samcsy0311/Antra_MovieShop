@@ -15,11 +15,6 @@ C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\Infrastructu
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
@@ -27,6 +22,11 @@ C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\b
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\ApplicationCore.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\bin\Debug\net6.0\ApplicationCore.pdb
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll

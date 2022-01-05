@@ -3,7 +3,10 @@ using ApplicationCore.ServiceInterfaces;
 using Infrastructure.data;
 using Infrastructure.Repositories;
 using Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,11 +35,23 @@ builder.Services.AddScoped<ICastRepository, CastRepository>();
 builder.Services.AddScoped<IPurchaseRepository, PurchaseRepository>();
 builder.Services.AddScoped<IFavoriteRepository, FavoriteRepository>();
 
+builder.Services.AddHttpContextAccessor();
 
 // Inject the connection string into the MovieShopDbContext constructor using DbContextOptions
 builder.Services.AddDbContext<MovieShopDbContext>(
      options => options.UseSqlServer(builder.Configuration.GetConnectionString("MovieShopDbConnection"))
 );
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+         ValidateIssuer = false,
+         ValidateAudience = false,
+         ValidateIssuerSigningKey = true,
+         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["SecretKey"]))
+    };
+});
 
 builder.Services.AddMemoryCache();
 
@@ -57,6 +72,8 @@ app.UseCors(b =>
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseAuthentication();
 
 app.MapControllers();
 

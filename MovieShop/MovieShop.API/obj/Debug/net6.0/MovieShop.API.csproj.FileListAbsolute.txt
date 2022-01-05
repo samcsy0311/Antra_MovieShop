@@ -77,11 +77,6 @@ C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShop.AP
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShop.API\obj\Debug\net6.0\ref\MovieShop.API.dll
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShop.API\obj\Debug\net6.0\MovieShop.API.pdb
 C:\Users\User\Desktop\Antra\AntraFullStackAssignment\MovieShop(new)\MovieShop.API\obj\Debug\net6.0\MovieShop.API.genruntimeconfig.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.AssemblyInfo.cs
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\appsettings.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\MovieShop.API.exe
@@ -90,6 +85,7 @@ C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bi
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\MovieShop.API.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\ref\MovieShop.API.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\MovieShop.API.pdb
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -147,7 +143,12 @@ C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bi
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\ApplicationCore.pdb
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.AssemblyInfo.cs
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\MovieShop.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\User\Desktop\Antra\MovieShop\Antra_MovieShop\MovieShop\MovieShop.API\obj\Debug\net6.0\scopedcss\bundle\MovieShop.API.styles.css
