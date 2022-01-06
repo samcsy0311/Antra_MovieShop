@@ -1,1 +1,29 @@
-<p>login works!</p>
+<!-- Use template-Driven approach -->
+<!-- ngModel directive is the one we use that uses FormControl behind the scenes -->
+<!-- template driven approach will require each html control to have name attribute -->
+<!-- ngModel uses banana in the box syntax -->
+<!-- before using template-driven or reactive forms, import those two modules in app module -->
+<!-- two way binding -->
+
+<div class="row justify-content-center">
+  <div class="col-md-4 ">
+    <h4> Login </h4>
+    <hr/>
+    <form (ngSubmit)="loginSubmit(loginForm)" #loginForm="ngForm">
+      <div class="text-danger"></div>
+      <div class="form-group">
+        <label class="control-label"></label>
+        <input class="form-control" name="email" [(ngModel)]="userLogin.email" />
+      </div>
+      <div class="form-group">
+        <label class="control-label"></label>
+        <input class="form-control" name="password" [(ngModel)]="userLogin.password" />
+      </div>
+      <div class="form-group">
+        <button type="submit" value="Login" class="btn btn-primary">
+                Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
