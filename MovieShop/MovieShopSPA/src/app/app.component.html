@@ -13,12 +13,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
             Dropdown
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li>
@@ -31,10 +30,30 @@
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div *ngIf="isLoggedIn;else elseBlock">
+        <div class="text-end">
+          <ul class="nav">
+              <li ngbDropdown class="nav-item dropdown">
+                  <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" aria-expanded="false">
+                      {{user.given_name}} {{user.family_name}}
+                  </a>
+                  <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item"> Purchases </a>
+                      <a class="dropdown-item"> Favorites </a>
+                      <!-- <a class="dropdown-item" asp-controller="User" asp-action="EditProfile"> Edit Profile </a> -->
+                      <a class="dropdown-item"> View Profile </a>
+                      <a class="dropdown-item" (click)="logout()"> Logout </a>
+                  </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <ng-template #elseBlock>
+        <div class="text-end">
+          <a class="btn btn-outline-primary me-2" [routerLink]="[ '/account/login' ]"> Login </a>
+          <a class="btn btn-primary" [routerLink]="[ '/account/register' ]"> Register </a>
+      </div>
+      </ng-template>
     </div>
   </div>
 </nav>
