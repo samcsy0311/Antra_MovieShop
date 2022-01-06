@@ -17,7 +17,8 @@ export class AuthenticationService {
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
   public isLoggedIn = this.isLoggedInSubject.asObservable();
 
-  constructor(private http:HttpClient, private jwtHelper: JwtHelperService) { }
+  constructor(private http:HttpClient) { }
+  private jwtHelper = new JwtHelperService();
 
   login(userLogin: Login): Observable<boolean> {
 

@@ -16,9 +16,9 @@ export class MovieCardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log('inside the child component');
-    console.log(this.movieCards);
-    console.log(this.testInfo);
+    // console.log('inside the child component');
+    // console.log(this.movieCards);
+    // console.log(this.testInfo);
   }
 
 }

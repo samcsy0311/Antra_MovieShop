@@ -21,7 +21,7 @@ export class MovieDetailsComponent implements OnInit {
     this.route.paramMap.subscribe(
       p => {
         this.id = Number(p.get('id'));
-        console.log('MovieId: ' + this.id);
+        //console.log('MovieId: ' + this.id);
         // get the movie id from the current URL and call Movie Service and show the movie details
         this.movieService.getMovieDetails(this.id).subscribe(
           m => {
@@ -31,7 +31,7 @@ export class MovieDetailsComponent implements OnInit {
             this.movie.releaseYear = new Date(m.releaseDate).getFullYear();
             this.movie.revenue = Math.round(m.revenue*1000)/1000;
             this.movie.budget = Math.round(m.budget*1000)/1000;
-            console.log(this.movie);
+            //console.log(this.movie);
           }
         );
       }

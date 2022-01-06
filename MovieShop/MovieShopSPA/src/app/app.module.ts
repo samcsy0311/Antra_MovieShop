@@ -12,6 +12,9 @@ import { MovieCardComponent } from './shared/components/movie-card/movie-card.co
 import { RouterModule } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { HeaderComponent } from './core/layout/header/header.component';
+import { UserModule } from './user/user.module';
+import { AdminModule } from './admin/admin.module';
+import { AccountModule } from './account/account.module';
 
 @NgModule({
   declarations: [
