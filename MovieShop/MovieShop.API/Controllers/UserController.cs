@@ -97,7 +97,7 @@ namespace MovieShop.API.Controllers
           public async Task<IActionResult> GetPurchases(int id)
           {
                var purchases = await _userService.GetUserPurchasedMovies(id);
-               if (purchases == null) return NotFound();
+               if (!purchases.Any()) return NotFound();
                return Ok(purchases);
           }
 
@@ -106,7 +106,7 @@ namespace MovieShop.API.Controllers
           public async Task<IActionResult> GetFavorites(int id)
           {
                var favorites = await _userService.GetUserFavoritedMovies(id);
-               if (favorites == null) return NotFound();
+               if (!favorites.Any()) return NotFound();
                return Ok(favorites);
           }
 
