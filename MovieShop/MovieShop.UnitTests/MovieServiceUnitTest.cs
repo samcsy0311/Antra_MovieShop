@@ -62,7 +62,7 @@ namespace MovieShop.UnitTests
                // Assert
                Assert.IsNotNull(movies);
                Assert.IsInstanceOfType(movies, typeof(IEnumerable<MovieCardResponseModel>));
-               //Assert.AreEqual(16, movies.Count());
+               //Assert.AreEqual(2, movies.Count());
           }
      }
 
